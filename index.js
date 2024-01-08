@@ -363,4 +363,26 @@ function showAddress(address) {
 }
 showAddress(address);
 
+// Exercise 2
 
+let address2 = createAddress ('parkside', 'kolkata', 9210)
+
+console.log(address2);
+//Factory Function 
+function createAddress(street, city, zipCode) {
+  return {
+    street,
+    city,
+    zipCode
+  };
+}
+
+// Constructor Function
+let address3 = new Address2('St carolina', 'new york', 5768)
+console.log(address3)
+
+function Address2(street, city, zipCode) {
+this.street = street;
+this.city = city;
+this.zipCode = zipCode;
+}
