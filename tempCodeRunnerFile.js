@@ -1,16 +1,18 @@
-const circle = {
+const circle3 = {
   radius: 1,
   draw() {
     console.log('draw');
   }
 };
-for (let key in circle)
-console.log(key, circle[key]);
 
-for (let key of Object.keys(circle))
-console.log(key);
+// const another3 = {};
+// for (let key in circle3)
+// another[key] = circle[key];
 
-for (let entry of Object.entries(circle))
-console.log(entry);
+// const another3 = Object.assign({
+//   color: 'yellow'
+// }, circle3)
 
-if ('radius in circle') console.log('yes');
+const another3 = {...circle3 };
+
+console.log(another3);
