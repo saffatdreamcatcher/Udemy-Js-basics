@@ -1,32 +1,7 @@
-function createCircle(radius) {
-  return {
-    // radius: radius,
-    radius,
+let obj = { value: 10};
 
-    draw() {
-      console.log('draw');
-    }
-    // draw: function() {
-    //   console.log('draw');
-    // }
-  };
+function increase(obj) {
+obj.value++;
 }
-const circle1 = createCircle(1);
-console.log(circle1);
-
-const circle2 = createCircle(2);
-console.log(circle2);
-
-
-// Constructor Function
-// const myCircle = createCircle(2);
-
-function Circle(radius) {
-  this.radius = radius;
-  this.draw = function() {
-    console.log('draw');
-  }
-}
- Circle.call({}, 1);
- Circle.apply({}, [1, 2, 3]);
-const another = new Circle(1);
+increase(obj);
+console.log(obj);

@@ -283,3 +283,22 @@ function Circle(radius) {
  Circle.apply({}, [1, 2, 3]);
 const another = new Circle(1);
 
+
+//Value vs Ref
+
+let number2 = 10;
+
+function increase(number2) {
+number2++;
+}
+increase(number2);
+console.log(number2);
+
+
+let obj = { value: 10};
+
+function increase(obj) {
+obj.value++;
+}
+increase(obj);
+console.log(obj);
