@@ -111,7 +111,7 @@ function isLandscape(width, height)
   return (width > height);
 }
 
-//11-Ex fizzBuzz
+//12-Ex fizzBuzz
 const output = fizzBuzz(14);
 console.log(output);
 
@@ -133,7 +133,7 @@ function fizzBuzz(input) {
   }
 }
 
-//12-Ex demerit points
+//13-Ex demerit points
 checkSpeed(130);
 
 function checkSpeed(speed) {
@@ -149,5 +149,16 @@ else {
 else
 console.log('Points', points)
 }
+}
+
+//15-Ex Count Truthy
+const array = [ 0, null, undefined, 1, 2, 3];
+console.log(countTruthy(array));
+function countTruthy(array) {
+  let count = 0;
+  for (let value of array)
+  if (value)
+  count++;
+return count;
 }
 
