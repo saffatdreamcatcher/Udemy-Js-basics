@@ -270,8 +270,8 @@ const circle2 = createCircle(2);
 console.log(circle2);
 
 
-// Constructor Function
-const myCircle = createCircle(2);
+// Functions are objects
+ const myCircle = createCircle(1);
 
 function Circle(radius) {
   this.radius = radius;
@@ -279,6 +279,7 @@ function Circle(radius) {
     console.log('draw');
   }
 }
+ Circle.call({}, 1);
+ Circle.apply({}, [1, 2, 3]);
+const another = new Circle(1);
 
-const circle = new Circle(2);
-console.log(circle.radius);
