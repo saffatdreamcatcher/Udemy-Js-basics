@@ -342,3 +342,23 @@ const another3 = {...circle3 };
 
 console.log(another3);
 
+
+//String 
+
+//string primitive
+const message = 'this is my first message';
+
+// String obj
+const anotherone = new String('hi');
+
+// Exercise 1
+let address = {
+  street: 'parkside',
+  city: 'kolkata', 
+  zipCode: 9210
+};
+function showAddress(address) {
+  for (let key in address)
+  console.log(key, address[key]);
+}
+showAddress(address);
