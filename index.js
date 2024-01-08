@@ -414,3 +414,19 @@ function Address(street, city, zipCode) {
   function areSame(address11, address12) {
     return address11 === address12;
   }
+
+
+  //Ex 4 Blog Post Object
+
+  let post = {
+    title: 'a', 
+    body: 'b',
+    author: 'c', 
+    views: 10,
+    comments: [
+      { author:'a', body: 'b'},
+      { author:'c', body: 'd'},
+    ],
+    isLive: true
+  };
+  console.log(post);
