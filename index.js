@@ -585,3 +585,24 @@ function except(array, excluded) {
   output2.push(element);
 return output2;
 }
+
+//Exercise 4 Moving an Element
+
+const movenums = [1, 2, 3, 4];
+
+const ouput3 = move(movenums, 0, -2);
+
+console.log(ouput3);
+
+function move(array, index, offset) {
+
+  const position = index + offset;
+  if (position >= array.length || position < 0) {
+    console.error('Invalid offset');
+    return
+  }
+ const output3 = [...array];
+ const element = output3.splice(index, 1)[0];
+ output3.splice(index + offset, 0, element);
+ return output3;
+}

@@ -1,14 +1,12 @@
+const movenums = [1, 2, 3, 4];
 
-const nms2 = [1, 2, 3, 4, 1, 1, 1];
+const ouput3 = move(movenums, 0, 1);
 
-const output2 = except(nms2, [1, 2]);
+console.log(ouput3);
 
-console.log(output2);
-
-function except(array, excluded) {
-  const output2 = [];
-  for (let element of array)
-  if (!excluded.includes(element))
-  output2.push(element);
-return output2;
+function move(array, index, offset) {
+ const output3 = [...array];
+ const element = output3.splice(index, 1)[0];
+ output3.splice(index + offset, 0, element);
+ return output3;
 }
