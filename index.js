@@ -606,3 +606,25 @@ function move(array, index, offset) {
  output3.splice(index + offset, 0, element);
  return output3;
 }
+
+//Exercise 5 Count Occurences
+
+const countnums =  [1, 2, 3, 4, 1];
+
+const count = countOccurrences(countnums, 1);
+
+console.log(count);
+
+function countOccurrences(array, searchElement) {
+//  let count = 0;
+//  for (let element of array)
+//   if(element === searchElement)
+//   count++;
+// return count;
+
+return array.reduce((accumulator, current) => {
+const occurrence = (current === searchElement) ? 1 : 0;
+console.log(accumulator, current, searchElement);
+return accumulator + occurrence;
+}, 0);
+}

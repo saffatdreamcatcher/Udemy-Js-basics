@@ -1,12 +1,19 @@
-const movenums = [1, 2, 3, 4];
+const countnums =  [1, 2, 3, 4, 1];
 
-const ouput3 = move(movenums, 0, 1);
+const count = countOccurrences(countnums, 1);
 
-console.log(ouput3);
+console.log(count);
 
-function move(array, index, offset) {
- const output3 = [...array];
- const element = output3.splice(index, 1)[0];
- output3.splice(index + offset, 0, element);
- return output3;
+function countOccurrences(array, searchElement) {
+//  let count = 0;
+//  for (let element of array)
+//   if(element === searchElement)
+//   count++;
+// return count;
+
+return array.reduce((accumulator, current) => {
+const occurrence = (current === searchElement) ? 1 : 0;
+console.log(accumulator, current, searchElement);
+return accumulator + occurrence;
+}, 0);
 }
