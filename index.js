@@ -497,3 +497,18 @@ function Address(street, city, zipCode) {
  });
 
  console.log(course);
+
+ //Arrow Functions
+
+ const books = [
+  {id: 1, name: 'a'},
+  {id: 2, name: 'b'},
+ ];
+
+//  const book = books.find(book => {
+//   return book.name === 'a';
+//  });
+const book = books.find(book => book.name ==='a')
+
+ console.log(book);
+

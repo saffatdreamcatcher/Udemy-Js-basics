@@ -1,10 +1,10 @@
- const courses = [
+const books = [
   {id: 1, name: 'a'},
   {id: 2, name: 'b'},
  ];
 
- const course = courses.find(function(course) {
-  return course.name === 'a';
+ const book = books.find(book => {
+  return book.name === 'a';
  });
 
- console.log(course);
+ console.log(book);
