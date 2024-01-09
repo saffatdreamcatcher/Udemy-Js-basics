@@ -1,8 +1,17 @@
- const first = [1, 2, 3];
- const second = [4, 5, 6];
- const combined = first.concat(second);
+const nums = [1, -1, 2, 3];
 
- const slice = combined.slice(2, 4);
+const filtered = nums.filter(n => n=> 0);
 
- console.log(combined);
- console.log(slice);
+//const items = filtered.map(n => '<li>' + n + '</li>');
+
+// const items = filtered.map(n => {
+//  const obj = {value: n};
+//  return obj;
+// });
+
+const items = filtered.map(n => ({ value: n }) );
+
+//const html = '<ul>' + items.join('') + '</ul>';
+
+//console.log(html);
+console.log(items);
