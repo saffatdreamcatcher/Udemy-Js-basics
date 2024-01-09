@@ -1,13 +1,11 @@
- walk();
-  
-  function walk() {
-    console.log('walk');
+  function sum(a, b) {
+
+    let total = 0;
+    for (let value of arguments)
+    total += value;
+  return total;
+    console.log(arguments);
+    return a + b;    // 1 + undefined
   }
 
-  //Anonymous Function Expression
-  let run = function() {
-    console.log('run');
-  };
-  let move = run;
-  run();
-  move();
+  console.log(sum(1, 2, 3, 4, 5));

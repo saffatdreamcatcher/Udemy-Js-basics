@@ -680,7 +680,7 @@ const titles = movies
 
   //function declaration
   walk();
-  
+
   function walk() {
     console.log('walk');
   }
@@ -692,4 +692,18 @@ const titles = movies
   let move = run;
   run();
   move();
+
+  //Arguments
+
+  function sum() {
+
+    let total = 0;
+    for (let value of arguments)
+    total += value;
+  return total;
+    console.log(arguments);
+    return a + b;    // 1 + undefined
+  }
+
+  console.log(sum(1, 2, 3, 4, 5));
 
