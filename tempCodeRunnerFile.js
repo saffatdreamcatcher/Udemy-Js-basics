@@ -1,29 +1,8 @@
-const prson = {
-firstName: 'Mosh',
-lastName: 'Hamedani',
-get fullName() {
-  return `${prson.firstName}  ${prson.lastName}`;
-},
-set fullName(value) {
-  if (typeof value !== 'string') 
-  throw new Error('Value is not a string');
+console.log(sum(1, 2, 3, 4));
 
-  const parts = value.split(' ');
-  if (parts.length !== 2)
-  throw new Error('Enter a first and last Name');
+function sum(...items) {
+  if (items.length === 1 && Array.isArray(items[0]))
+  items= [...items[0]];
 
-  this.firstName = parts[0];
-  this.lastName = parts[1];
+  return items.reduce((a, b) => a + b);
 }
-};
-
-//prson.fullName = 'John Smith'
-try {
-  prson.fullName = '';
-}
-catch (e) {
- alert(e);
-}
-
-//console.log(prson.fullName);
-console.log(prson);
