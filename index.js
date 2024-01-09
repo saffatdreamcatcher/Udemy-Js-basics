@@ -543,3 +543,15 @@ const items = filtered.map(n => ({ value: n }) );
 
 //console.log(html);
 console.log(items);
+
+
+//Exercise 1 Array from Range
+
+const nmbrs = arrayFromRange (1, 4);
+console.log(nmbrs);
+function arrayFromRange(min, max) {
+  const output = [];
+  for (let i = min; i<=max; i++)
+  output.push(i);
+return output;
+}

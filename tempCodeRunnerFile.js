@@ -1,17 +1,8 @@
-const nums = [1, -1, 2, 3];
-
-const filtered = nums.filter(n => n=> 0);
-
-//const items = filtered.map(n => '<li>' + n + '</li>');
-
-// const items = filtered.map(n => {
-//  const obj = {value: n};
-//  return obj;
-// });
-
-const items = filtered.map(n => ({ value: n }) );
-
-//const html = '<ul>' + items.join('') + '</ul>';
-
-//console.log(html);
-console.log(items);
+const nmbrs = arrayFromRange (1, -1);
+console.log(nmbrs);
+function arrayFromRange(min, max) {
+  const output = [];
+  for (let i = min; i<=max; i++)
+  output.push(i);
+return output;
+}
