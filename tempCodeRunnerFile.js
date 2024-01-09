@@ -1,8 +1,8 @@
-console.log(sum(1, 2, 3, 4));
+const crcle = {
+  radius: 2,
+  get area() {
+    return Math.PI * this.radius * this.radius;
+  }
+};
 
-function sum(...items) {
-  if (items.length === 1 && Array.isArray(items[0]))
-  items= [...items[0]];
-
-  return items.reduce((a, b) => a + b);
-}
+console.log(crcle.area);
