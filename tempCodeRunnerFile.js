@@ -1,7 +1,10 @@
+ const courses = [
+  {id: 1, name: 'a'},
+  {id: 2, name: 'b'},
+ ];
 
- const numbers2 = [1, 2, 3, 2, 4];
- console.log(numbers2.indexOf(2));
- console.log(numbers2.lastIndexOf((2)));
+ const course = courses.find(function(course) {
+  return course.name === 'a';
+ });
 
- console.log(numbers2.indexOf(2) !== -1);
- console.log(numbers2.includes(3));
+ console.log(course);

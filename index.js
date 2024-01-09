@@ -484,3 +484,16 @@ function Address(street, city, zipCode) {
 
  console.log(numbers2.indexOf(2) !== -1);
  console.log(numbers2.includes(3));
+
+
+ //Finding Elements (Ref Types) 
+ const courses = [
+  {id: 1, name: 'a'},
+  {id: 2, name: 'b'},
+ ];
+
+ const course = courses.find(function(course) {
+  return course.name === 'a';
+ });
+
+ console.log(course);
