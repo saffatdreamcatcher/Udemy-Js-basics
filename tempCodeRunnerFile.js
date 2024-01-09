@@ -1,13 +1,16 @@
-  console.log(sum(1, 2, 3, 4, 5));
+const person = {
+firstName: 'Mosh',
+lastName: 'Hamedani',
+get fullName() {
+  return `${person.firstName}  ${person.lastName}`;
+},
+set fullName(value) {
+  const parts = value.split(' ');
+  this.firstName = parts[0];
+  this.lastName = parts[1];
+}
+};
 
-  //the rest Operator
+person.fullName = 'John Smith'
 
-  function sum(discount, ...prices) {
-    //console.log(args);
-    // return args.reduce((a,b) => a + b);
-    const total = prices.reduce((a,b) => a + b);
-    return total * (1- discount);
-  }
-
-  // console.log(sum(1, 2, 3, 4, 5, 10));
-  console.log(sum(0.1, 20, 30));
+console.log(person.fullName);
