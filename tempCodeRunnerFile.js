@@ -1,10 +1,8 @@
-const books = [
-  {id: 1, name: 'a'},
-  {id: 2, name: 'b'},
- ];
+ const first = [1, 2, 3];
+ const second = [4, 5, 6];
+ const combined = first.concat(second);
 
- const book = books.find(book => {
-  return book.name === 'a';
- });
+ const slice = combined.slice(2, 4);
 
- console.log(book);
+ console.log(combined);
+ console.log(slice);
