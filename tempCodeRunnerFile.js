@@ -1,13 +1,7 @@
- const numbers = [3, 4];
 
- //End
- numbers.push(5, 6);
- console.log(numbers);
+ const numbers2 = [1, 2, 3, 2, 4];
+ console.log(numbers2.indexOf(2));
+ console.log(numbers2.lastIndexOf((2)));
 
- //Begining
- numbers.unshift(1,2);
- console.log(numbers);
-
- //Middle 
- numbers.splice(2, 0, 'a', 'b');
- console.log(numbers);
+ console.log(numbers2.indexOf(2) !== -1);
+ console.log(numbers2.includes(3));
