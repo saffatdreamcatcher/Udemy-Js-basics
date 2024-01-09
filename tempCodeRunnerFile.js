@@ -1,5 +1,13 @@
- let priceRanges = [
-    {label: '$', tooltip: 'Inexpensive', minPerPerson: 0, maxPerPerson: 10},
-    {label: '$$', tooltip: 'Moderate', minPerPerson: 11, maxPerPerson: 20},
-    {label: '$$$', tooltip: 'Expensive', minPerPerson: 21, maxPerPerson: 50}
-  ];
+ const numbers = [3, 4];
+
+ //End
+ numbers.push(5, 6);
+ console.log(numbers);
+
+ //Begining
+ numbers.unshift(1,2);
+ console.log(numbers);
+
+ //Middle 
+ numbers.splice(2, 0, 'a', 'b');
+ console.log(numbers);
