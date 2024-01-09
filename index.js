@@ -679,6 +679,8 @@ const titles = movies
   //Section 7: Functions
 
   //function declaration
+  walk();
+  
   function walk() {
     console.log('walk');
   }

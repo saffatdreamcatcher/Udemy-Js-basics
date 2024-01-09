@@ -1,4 +1,6 @@
-function walk() {
+ walk();
+  
+  function walk() {
     console.log('walk');
   }
 
@@ -6,4 +8,6 @@ function walk() {
   let run = function() {
     console.log('run');
   };
+  let move = run;
   run();
+  move();
