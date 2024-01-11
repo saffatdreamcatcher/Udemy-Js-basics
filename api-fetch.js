@@ -5,11 +5,24 @@ function loadApiData() {
 }
 
 function displayData(data) {
-  const div = document.getElementById('divtag');
-  
+  const div = document.getElementById('divTag');
   data.map(user => {
     const p = document.createElement('p');
     p.innerText = user.title;
     div.appendChild(p);
   });
+  
+
+  // const div = document.getElementById('divTag');
+  
+  // for (let i = 0; i <= data.length; i++)
+  // {
+  //   console.log('div:', data[i]);
+  // }
+
+  //   const p = document.createElement('p');
+  //   p.innerText = user.title;
+  //   div.appendChild(p);
+ 
 }
+
