@@ -4,11 +4,18 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dom api fetch </title>
+  <style>
+    #loading{
+      display: none;
+      background-color: red;
+      padding: 20px;
+    }
+  </style>
 </head>
 <body>
   <button onclick="loadApiData()">Click for Data</button>
   <div id="divTag">
-    
+    <div id="loading">Loading</div>
   </div>
   <script src="api-fetch.js"></script>
 </body>

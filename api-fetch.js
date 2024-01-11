@@ -1,12 +1,28 @@
+const customLoader = document.getElementById("loading")
+
+
+
 function loadApiData() {
+  customLoader.style.display = "block"
+  console.log("callllll");
   setTimeout(() => {
   fetch('https://jsonplaceholder.typicode.com/posts')
 .then(response => response.json())
-.then(data => displayData(data)) 
+.then(data => {
+  customLoader.style.display = "none"  
+  displayData(data)
+}) 
+.catch( error => {
+  customLoader.style.display = "none"  
+  alert(error)
+  console.log(error);
+})
 }, 3000 );
 }
 
 function displayData(data) {
+
+  const divLoading = document.getElementById('loading');
 
   const div = document.getElementById('divTag');
   data.map(user => {
@@ -15,7 +31,7 @@ function displayData(data) {
     div.appendChild(p);
   });
 
-
+ 
   
   //Using for loop
 
@@ -45,4 +61,7 @@ function displayData(data) {
   // });
 
 }
+
+
+
 
