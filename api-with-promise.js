@@ -2,7 +2,7 @@ const customLoader = document.getElementById("loading");
 
 function prom() {
   return new Promise((resolve, reject) => {
-    fetch('https://jsonplaceholder.typicode.com/posts')
+    fetch('https://jsonplaceholder.typicode.com/users')
       .then(response => {
 
         return response.json();
@@ -34,7 +34,7 @@ function displayData(data) {
 
   data.forEach(user => {
     const p = document.createElement('p');
-    p.innerText = user.title;
+    p.innerText = user.name;
     div.appendChild(p);
   });
 }

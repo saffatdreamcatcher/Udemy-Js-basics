@@ -6,14 +6,14 @@ function loadApiData() {
   customLoader.style.display = "block"
   console.log("callllll");
   setTimeout(() => {
-  fetch('https://jsonplaceholder.typicode.com/posts')
+  fetch('https://jsonplaceholder.typicode.com/users')
 .then(response => response.json())
 .then(data => {
   customLoader.style.display = "none"  
   displayData(data)
 }) 
 .catch( error => {
-  customLoader.style.display = "none"  
+  customLoader.style.display = "none" 
   alert(error)
   console.log(error);
 })
@@ -27,7 +27,7 @@ function displayData(data) {
   const div = document.getElementById('divTag');
   data.map(user => {
     const p = document.createElement('p');
-    p.innerText = user.title;
+    p.innerText = user.name;
     div.appendChild(p);
   });
 
