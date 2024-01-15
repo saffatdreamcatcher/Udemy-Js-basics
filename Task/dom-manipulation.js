@@ -1,12 +1,12 @@
 function showLoader() {
-  // document.getElementById('loader').style.display = 'block';
+  document.getElementById('loader').style.display = 'block';
   document.getElementById('loader').style.width = '0%';
   document.getElementById('overlay').style.display = 'flex';
 
 }
 
 function hideLoader() {
-  // document.getElementById('loader').style.display = 'none';
+  document.getElementById('loader').style.display = 'none';
   document.getElementById('overlay').style.display = 'none';
   document.querySelector('.h-text').style.backgroundColor = 'black';
   document.querySelector('.h-text').style.color = 'white';
@@ -17,7 +17,7 @@ function loadAction() {
   
   setTimeout(function() {
     hideLoader();
-    console.log('loading!');
+    console.log('loading done!');
   }, 3000);
 }
 
