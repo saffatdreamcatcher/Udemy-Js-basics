@@ -18,7 +18,7 @@ function loadAction() {
   setTimeout(function() {
     hideLoader();
     console.log('loading done!');
-  }, 3000);
+  }, 2000);
 }
 
 function reset() {
