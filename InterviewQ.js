@@ -61,3 +61,9 @@ console.log(languageName, createrName);
 //Remove duplicate from array
 const arr = [1, 1, 2, 2, 3, 3, 4, 5, 6]
 console.log([...new Set(arr)]);
+
+
+//Shuffling Array 
+
+const nums = [1, 2, 3, 4, 5, 6];
+console.log(nums.sort(() => Math.random() - 0.5));
