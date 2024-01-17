@@ -27,8 +27,8 @@ function reset() {
 }
 
 function resetInitial() {
-  console.log('back to initial state!');
   reset();
+  console.log('back to initial state!');
 }
 
 
