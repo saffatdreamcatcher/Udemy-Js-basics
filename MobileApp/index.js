@@ -17,7 +17,8 @@ addButtonEl.addEventListener("click", function() {
   let inputValue = inputFieldEl.value;
 
   push(moviesInDB, inputValue);
-  inputFieldEl.value = "";
+  clearInputFieldEl();
+  
 
   if (inputValue === "") {
     console.log("Input is blank. Please enter a value.");
@@ -25,9 +26,17 @@ addButtonEl.addEventListener("click", function() {
     // console.log("Input value: ", inputValue);
     console.log(`${inputValue} added to database`)
   }
-  shoppingListEl.innerHTML += `<li>${inputValue}</li>`;
+  appendItemToshoppingListEl(inputValue);
 
 })
+
+function clearInputFieldEl() {
+  inputFieldEl.value = "";
+}
+
+function appendItemToshoppingListEl(itemValue) {
+  shoppingListEl.innerHTML += `<li>${itemValue}</li>`;
+}
 
 
 // Firebase data implementation
