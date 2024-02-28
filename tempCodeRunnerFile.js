@@ -1,3 +1,8 @@
-const nmbers = [1, 2, 3];
-for (let number of nmbers)
-  console.log(number);
+function start() {
+  for (let i = 0; i < 5; i++)
+  {
+    console.log(i);
+  }
+  console.log(i);
+}
+start();

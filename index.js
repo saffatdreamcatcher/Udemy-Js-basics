@@ -476,25 +476,41 @@ const book = books.find((book) => book.name === "a");
 
 console.log(book);
 
-//Iterrating an array
-
-const nmbers = [1, 2, 3];
-for (let number of nmbers)
-  console.log(number);
-
-// nmbers.forEach(number => console.log(number));
-nmbers.forEach((number, index) => console.log(index, number));
-
 //Combining and slicing arrays
 
 const first = [1, 2, 3];
 const second = [4, 5, 6];
 const combined = first.concat(second);
 
-
 const slice = combined.slice(2, 4);
 console.log(combined);
 console.log(slice);
+
+//Iterrating an array
+
+const nmbers = [1, 2, 3];
+for (let number of nmbers) console.log(number);
+
+// nmbers.forEach(number => console.log(number));
+nmbers.forEach((number, index) => console.log(index, number));
+
+//SORTING ARRAYS
+const courses5 = [
+  { id: 1, name: "Node.js" },
+  { id: 2, name: "javaScript" },
+];
+
+courses5.sort(function (a, b) {
+  const nameA = a.name.toLowerCase();
+  const nameB = b.name.toLowerCase();
+
+  // if (a.name < b.name) return - 1;
+  // if (a.name > b.name) return 1;
+  if (nameA < nameB) return -1;
+  if (nameA > nameB) return 1;
+  return 0;
+});
+console.log(courses5);
 
 //Mapping an Array
 
@@ -515,6 +531,14 @@ const items = filtered.map((n) => ({ value: n }));
 
 //console.log(html);
 console.log(items);
+
+//REDUCING AN ARRAY
+const numbers7 = [1, -1, 2, 3, 5];
+
+const sum = numbers7.reduce(
+  (accumulator, currentValue) => accumulator + currentValue
+);
+console.log(sum);
 
 //Exercise 1 Array from Range
 
@@ -556,7 +580,7 @@ function except(array, excluded) {
 
 const movenums = [1, 2, 3, 4];
 
-const ouput3 = move(movenums, 0, -2);
+const ouput3 = move(movenums, 0, 1);
 
 console.log(ouput3);
 
@@ -663,8 +687,8 @@ function sum() {
   let total = 0;
   for (let value of arguments) total += value;
   return total;
-  console.log(arguments);
-  return a + b; // 1 + undefined
+  // console.log(arguments);
+  // return a + b; // 1 + undefined
 }
 
 console.log(sum(1, 2, 3, 4, 5));
@@ -750,3 +774,12 @@ function countOccurrences(array, searchElement) {
     return accumulator + occurrence;
   }, 0);
 }
+
+//LET VS VAR
+function start() {
+  for (var i = 0; i < 5; i++) {
+    console.log(i);
+  }
+  console.log(i);
+}
+start();
