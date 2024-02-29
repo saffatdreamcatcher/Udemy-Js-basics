@@ -1,5 +1,5 @@
 async function hello() {
-  return 'Hello';
+  return "Hello";
 }
 
 console.log(hello());
@@ -7,44 +7,39 @@ console.log(hello());
 const paymentSuccess = true;
 const marks = 90;
 
-
 function enroll() {
-  console.log('Course enrollment is in progress.');
+  console.log("Course enrollment is in progress.");
 
-  const promise = new Promise(function(resolve, reject) {
- setTimeout(function() {
-   if(paymentSuccess) {
-    resolve();
-   } else {
-    reject('Payment failed!');
-   }
- })
+  const promise = new Promise(function (resolve, reject) {
+    setTimeout(function () {
+      if (paymentSuccess) {
+        resolve();
+      } else {
+        reject("Payment failed!");
+      }
+    });
   });
 }
 
-
-
-
 function progress() {
-  console.log('Course on progress');
+  console.log("Course on progress");
 
-  const promise = new Promise(function(resolve, reject) {
-    setInterval(function() {
-      if(marks >= 80) {
+  const promise = new Promise(function (resolve, reject) {
+    setInterval(function () {
+      if (marks >= 80) {
         resolve();
       } else {
-        console.log('You could not get enough marks to get the certificate')
+        reject("You could not get enough marks to get the certificate");
       }
-    })
-  })
+    });
+  });
 }
 
-
 function getCertificate() {
-  console.log('Preparing your certificate!');
+  console.log("Preparing your certificate!");
 
-  const promise = new Promise (function(resolve) {
-    setTimeout(function(){
+  const promise = new Promise(function (resolve) {
+    setTimeout(function () {
       resolve("congrats! You got the certificate");
     }, 1000);
   });
@@ -52,19 +47,16 @@ function getCertificate() {
   return promise;
 }
 
-
 async function course() {
   try {
-  await enroll();
-  await progress();
-  const message = await getCertificate();
+    await enroll();
+    await progress();
+    const message = await getCertificate();
 
-  console.log(message);
-}
-catch(err) {
-  console.log(err);
-}
-
+    console.log(message);
+  } catch (err) {
+    console.log(err);
+  }
 }
 
 course();
