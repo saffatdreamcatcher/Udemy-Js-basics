@@ -10,7 +10,7 @@ const loadCountry = () => {
     });
 };
 const displayCountries = (countries) => {
-  // console.log("COUNTRIES:", countries);
+  console.log("COUNTRIES:", countries);
   const countryGlobal = document.getElementById("country");
   countryGlobal.innerHTML = "";
 
@@ -48,6 +48,6 @@ const searchData = () => {
       displayCountries(country);
     });
 };
-document.getElementById("search").addEventListener("input", searchData);
+document.getElementById("search").addEventListener("keydown", searchData);
 
 loadCountry();
