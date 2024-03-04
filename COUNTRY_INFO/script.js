@@ -3,10 +3,10 @@ const loadCountry = () => {
   fetch("https://restcountries.com/v3.1/all")
     .then((response) => response.json())
     .then((countries) => {
-      setTimeout(() => {
+      if (countries) {
         document.getElementById("loader").style.display = "none";
         displayCountries(countries);
-      }, 2000);
+      }
     });
 };
 const displayCountries = (countries) => {
@@ -33,5 +33,21 @@ const displayCountries = (countries) => {
     countryGlobal.appendChild(div);
   });
 };
+
+const searchData = () => {
+  document.getElementById("loader").style.display = "block";
+  const searchByName = document.getElementById("search");
+  const countryName = searchByName.value;
+
+  const url = `https://restcountries.com/v3.1/name/${countryName}`;
+
+  fetch(url)
+    .then((response) => response.json())
+    .then((country) => {
+      document.getElementById("loader").style.display = "none";
+      displayCountries(country);
+    });
+};
+document.getElementById("search").addEventListener("input", searchData);
 
 loadCountry();
