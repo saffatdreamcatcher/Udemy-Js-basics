@@ -26,7 +26,7 @@ const displayCountries = (countries) => {
                     <h5>${country.name.common}</h5>
                     <h6>Official Name : ${country.name.official}</h6>
                     <h6>Capital : ${country.capital}</h6>
-                    <h6>Lnaguages: ${Object.keys(languages).map(
+                    <h6>Lanaguages: ${Object.keys(languages).map(
                       (key) => languages[key]
                     )}</h6>
                     </div>`;
