@@ -1,7 +1,13 @@
 const loadCountry = () => {
+  document.getElementById("loader").style.display = "block";
   fetch("https://restcountries.com/v3.1/all")
     .then((response) => response.json())
-    .then((countries) => displayCountries(countries));
+    .then((countries) => {
+      setTimeout(() => {
+        document.getElementById("loader").style.display = "none";
+        displayCountries(countries);
+      }, 2000);
+    });
 };
 const displayCountries = (countries) => {
   // console.log("COUNTRIES:", countries);
@@ -12,9 +18,7 @@ const displayCountries = (countries) => {
     const languages = country.languages;
     console.log(languages);
     const div = document.createElement("div");
-    div.classList.add("col-lg-4");
-    div.classList.add("col-lg-4");
-    div.classList.add("col-lg-4");
+    div.classList.add("col-lg-3");
     div.innerHTML = `<div class="card">
                     <div class="d-flex justify-content-center align-items-center">
                     <img src="${country.flags.png}" width="100%" alt="">
