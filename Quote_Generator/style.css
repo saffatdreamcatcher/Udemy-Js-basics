@@ -73,6 +73,11 @@ button:active {
   height: 120px;
   animation: spin 2s linear infinite;
 }
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 @keyframes spin {
   0% {
