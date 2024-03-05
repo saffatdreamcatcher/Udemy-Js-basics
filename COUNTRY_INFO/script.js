@@ -30,7 +30,7 @@ const displayCountries = (countries) => {
                       (key) => languages[key]
                     )}</h6>
                     </div>`;
-    countryGlobal.appendChild(div);
+    countryGlobal.appendChild(div); 
   });
 };
 
