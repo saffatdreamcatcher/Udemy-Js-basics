@@ -4,8 +4,8 @@
 
   // get the quotes from API
   const getQuotes = async (page, limit) => {
-    const API_URL = `https://api.javascripttutorial.net/v1/quotes/?page=${page}&limit=${limit}`;
-    const response = await fetch(API_URL);
+    const apiUrl = `https://api.javascripttutorial.net/v1/quotes/?page=${page}&limit=${limit}`;
+    const response = await fetch(apiUrl);
 
     if (response.ok) {
       return await response.json();
