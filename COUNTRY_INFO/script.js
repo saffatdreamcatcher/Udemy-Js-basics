@@ -50,6 +50,7 @@ const displayCountries = (countries) => {
 
 const searchData = () => {
   document.getElementById("loader").style.display = "block";
+  document.getElementById("overlay").style.display = "block";
   const searchByName = document.getElementById("search");
   const countryName = searchByName.value;
 
@@ -59,9 +60,11 @@ const searchData = () => {
     .then((response) => response.json())
     .then((country) => {
       document.getElementById("loader").style.display = "none";
+      // document.body.style.backgroundColor = "rgba(75, 85, 89, 0.5)";
+      document.getElementById("overlay").style.display = "none";
       displayCountries(country);
     });
 };
-document.getElementById("search").addEventListener("keydown", searchData);
+document.getElementById("search").addEventListener("input", searchData);
 
 loadCountry();
