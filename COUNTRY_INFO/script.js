@@ -1,10 +1,12 @@
 const loadCountry = () => {
   document.getElementById("loader").style.display = "block";
+  document.getElementById("overlay").style.display = "block";
   fetch("https://restcountries.com/v3.1/all")
     .then((response) => response.json())
     .then((countries) => {
       if (countries) {
         document.getElementById("loader").style.display = "none";
+         document.getElementById("overlay").style.display = "none";
         displayCountries(countries);
       }
     });
