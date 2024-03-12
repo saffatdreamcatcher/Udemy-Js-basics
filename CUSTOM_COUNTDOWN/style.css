@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:ital@0;1&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital@0;1&display=swap");
 
 html {
   box-sizing: border-box;
@@ -101,6 +101,58 @@ button {
 
 button:hover {
   filter: brightness(110%);
+}
+
+/* Countdown */
+ul {
+  margin-left: -45px;
+}
+
+li {
+  display: inline-block;
+  font-size: 30px;
+  list-style-type: none;
+  padding: 10px;
+  text-transform: uppercase;
+}
+
+li span {
+  display: block;
+  font-size: 80px;
+  text-align: center;
+}
+
+/* Complete */
+.complete {
+  position: relative;
+  top: 60px;
+}
+
+.complete-title {
+  animation: complete 4s infinite;
+}
+
+@keyframes complete {
+  0% {
+    color: rgb(233, 12, 12);
+  }
+
+  25% {
+    color: rgb(214, 193, 0);
+  }
+
+  50% {
+    color: rgb(68, 231, 19);
+    transform: scale(1.5);
+  }
+
+  75% {
+    color: rgb(19, 79, 209);
+  }
+
+  100% {
+    color: rgb(188, 16, 211);
+  }
 }
 
 /* Media Query: Large Smartphone (Vertical) */
