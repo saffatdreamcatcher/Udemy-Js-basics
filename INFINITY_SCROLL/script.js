@@ -31,26 +31,28 @@ function setAttributes(element, attributes) {
 function displayPhotos() {
   imagesLoaded = 0;
   totalImages = photosArray.length;
-  photosArray.forEach((photo) => {
-     // Create <a> to link to Unsplash
-     const item = document.createElement("a");
-     setAttributes(item, {
-       href: photo.links.html,
-       target: "_blank",
-     });
-     // Create <img> for photo
-     const img = document.createElement("img");
-     setAttributes(img, {
-       src: photo.urls.regular,
-       alt: photo.alt_description,
-       title: photo.alt_description,
-     });
-     // Event Listener, check when each is finished loading
-     img.addEventListener("load", imageLoaded);
-     // Put <img> inside <a>, then put both inside imageContainer Element
-     item.appendChild(img);
-     imageContainer.appendChild(item);
-   });
+  // photosArray.forEach((photo) => {
+  const photoGallery = photosArray.map((photo) => {
+    // Create <a> to link to Unsplash
+    const item = document.createElement("a");
+    setAttributes(item, {
+      href: photo.links.html,
+      target: "_blank",
+    });
+    // Create <img> for photo
+    const img = document.createElement("img");
+    setAttributes(img, {
+      src: photo.urls.regular,
+      alt: photo.alt_description,
+      title: photo.alt_description,
+    });
+    // Event Listener, check when each is finished loading
+    img.addEventListener("load", imageLoaded);
+    // Put <img> inside <a>, then put both inside imageContainer Element
+    item.appendChild(img);
+    imageContainer.appendChild(item);
+    return photoGallery;
+  });
 }
 
 // Get photos from Unsplash API
