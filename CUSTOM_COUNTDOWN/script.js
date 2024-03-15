@@ -67,7 +67,7 @@ function updateCountdown(e) {
   countdownDate = e.srcElement[1].value;
   savedCountdown = {
     title: countdownTitle,
-    date: countdownDate,
+    date: countdownDate, 
   };
   localStorage.setItem("countdown", JSON.stringify(savedCountdown));
   // Check for valid date
